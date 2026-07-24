@@ -616,7 +616,21 @@
                     <h3>Release Notes</h3>
                     <div class="card-scroll">
                         <div class="release-item">
-                            <span class="release-badge">v3.0 — Latest</span>
+                            <span class="release-badge">v4.0 — Latest</span>
+                            <ul>
+                                <li><strong>NEW:</strong> Pie and Donut charts for Column tables — each column becomes a slice sized by its total or mean, with optional percentage labels.</li>
+                                <li><strong>NEW:</strong> One-click Dose response curve for XY tables — fits a sigmoidal 4-parameter (4PL) model and shows the EC50 and Hill slope directly on the graph, with no separate analysis to set up.</li>
+                                <li><strong>NEW:</strong> Heatmap for Multiple Variables tables — color-codes every value across variables and subjects, with selectable color scales (Viridis / Red-Blue / Heat), optional value labels and a legend.</li>
+                                <li><strong>NEW:</strong> Survival curve (Kaplan-Meier) for XY tables — step curve with censored-subject tick marks, supporting two data formats: one-row-per-subject event codes, or raw survivor counts per timepoint.</li>
+                                <li><strong>NEW:</strong> Identify outliers (ROUT method) for Column tables — flags outliers column-by-column with a robust fit and false-discovery-rate control (adjustable Q), following the published Motulsky & Brown method, and lists exactly which rows to exclude.</li>
+                                <li><strong>FIXED:</strong> Dose response curves silently failing to fit real data — the fit now keeps an X=0 control/vehicle point instead of rejecting the whole dataset, defaults to the raw-concentration model, and shows an inline message when a model genuinely can't fit the data.</li>
+                                <li><strong>FIXED:</strong> Survival curves misreading "number still alive at each timepoint" data as event codes — a new Data format switch (Event codes / Survivor counts) makes both conventions plot correctly.</li>
+                                <li><strong>FIXED:</strong> Dose response Model button labels being clipped in the side panel.</li>
+                                <li><strong>IMPROVED:</strong> Clearer color selection — the chosen color is now a larger dot while the others shrink and dim, consistently in the graph's Colors panel and the spreadsheet's right-click Color menu.</li>
+                            </ul>
+                        </div>
+                        <div class="release-item">
+                            <span class="release-badge">v3.0</span>
                             <ul>
                                 <li><strong>NEW:</strong> Add a linear regression fit line with 95% confidence band and curve equation (Y = aX + b) directly on XY scatter graphs.</li>
                                 <li><strong>NEW:</strong> Customize graph colors: set a color per data series from the graph's new Colors panel, and highlight individual points by coloring single cells directly from the spreadsheet's right-click menu.</li>
@@ -650,10 +664,10 @@
                     <h3>Data Organization</h3>
                     <div class="card-scroll">
                         <ul>
-                            <li><strong>Three-pillar structure:</strong> Tables → Analyses / Graphs, with every analysis and graph linked back to its source table</li>
-                            <li><strong>4 table types:</strong> Column, XY, Grouped, Multiple Variables</li>
-                            <li><strong>Spreadsheet-style grid:</strong> Copy/paste, undo/redo, multi-cell selection, row/column deletion</li>
-                            <li><strong>Data exclusion:</strong> selectively exclude data points from graphs and statistical analyses</li>
+                            <li><strong>Three-pillar structure</strong> — Tables → Analyses / Graphs, with every analysis and graph linked back to its source table</li>
+                            <li><strong>4 table types</strong> — Column, XY, Grouped, Multiple Variables — each offering the analyses and graphs that fit its data shape</li>
+                            <li><strong>Spreadsheet-style grid</strong> — Copy/paste, undo/redo, multi-cell selection, row/column deletion</li>
+                            <li><strong>Data exclusion</strong> — selectively exclude data points from graphs and statistical analyses</li>
                         </ul>
                     </div>
                 </article>
@@ -662,16 +676,12 @@
                     <h3>Statistical Analyses</h3>
                     <div class="card-scroll">
                         <ul>
-                            <li><strong>Smart guided wizards:</strong> for test selection based on your table type</li>
-                            <li><strong>Descriptive statistics</strong></li>
-                            <li><strong>Compare two groups:</strong> Student's t test, Welch's t test, Mann-Whitney, paired t test, Wilcoxon</li>
-                            <li><strong>Compare multiple groups:</strong> One-way ANOVA, Kruskal-Wallis, repeated-measures ANOVA, Friedman test</li>
-                            <li><strong>Post-hoc tests:</strong> Tukey, Bonferroni, Dunn's test</li>
-                            <li><strong>One-sample t test, correlation &amp; correlation matrix</strong></li>
-                            <li><strong>Linear regression and nonlinear regression:</strong> (straight line, sigmoidal 4PL, semilog, hyperbola, polynomials)</li>
-                            <li><strong>Two-way ANOVA</strong></li>
-                            <li><strong>Multiple regression and multiple t tests</strong></li>
-                            <li><strong>Multiple-comparison corrections:</strong> Holm, FDR (Benjamini-Hochberg)</li>
+                            <li><strong>Smart guided wizards</strong> propose the right test for your table type</li>
+                            <li><strong>Column tables</strong> — descriptive statistics; compare two groups (Student's t, Welch's t, Mann-Whitney, paired t, Wilcoxon); compare multiple groups (one-way ANOVA, Kruskal-Wallis, repeated-measures ANOVA, Friedman); one-sample t test; identify outliers (ROUT method, Motulsky & Brown, with adjustable false-discovery-rate Q)</li>
+                            <li><strong>XY tables</strong> — correlation, linear regression, nonlinear regression (straight line, sigmoidal 4PL, semilog, hyperbola, polynomials), area under the curve</li>
+                            <li><strong>Grouped tables</strong> — two-way ANOVA, multiple t tests</li>
+                            <li><strong>Multiple Variables tables</strong> — correlation matrix, multiple regression</li>
+                            <li><strong>Across all tests</strong> — post-hoc comparisons (Tukey, Bonferroni, Dunn's) and multiple-comparison corrections (Holm, FDR / Benjamini-Hochberg)</li>
                         </ul>
                     </div>
                 </article>
@@ -680,27 +690,30 @@
                     <h3>Graphs</h3>
                     <div class="card-scroll">
                         <ul>
-                            <li><strong>Chart types:</strong> Individual values, box plots, violin plots, scatter, line, bars, area, stacked bars</li>
-                            <li><strong>Custom colors:</strong> assign a color to each data series, or highlight individual data points; colors are shared by every graph drawn from the same table</li>
-                            <li><strong>Regression overlay:</strong> draw a linked linear-regression fit line, 95% confidence band, and equation with R² directly on scatter plots</li>
-                            <li><strong>Interactive rendering:</strong> zoom in and out, adjust axes thickness and font size</li>
-                            <li><strong>Resizable graphs:</strong> drag any axis to resize, with a live size readout to match dimensions across graphs</li>
-                            <li><strong>Axis control:</strong> Manual or automatic min/max/step</li>
-                            <li><strong>Error bars:</strong> SD, SEM, or none</li>
-                            <li><strong>Significance annotations:</strong> Stars or p-values with pairwise comparisons</li>
-                            <li><strong>Export to:</strong> PNG, JPG, or SVG; copy to clipboard</li>
+                            <li><strong>Column tables</strong> — individual values, box & violin plots, mean ± error bars, pie and donut charts</li>
+                            <li><strong>XY tables</strong> — scatter, bar, and area plots; dose-response curves (one-click sigmoidal 4PL with EC50 and Hill slope on the graph); Kaplan-Meier survival curves (censored-subject ticks, from event codes or survivor counts)</li>
+                            <li><strong>Grouped tables</strong> — grouped scatter, bars, lines, stacked bars, horizontal bars</li>
+                            <li><strong>Multiple Variables tables</strong> — heatmaps with selectable color scales (Viridis / Red-Blue / Heat), optional value labels and a legend</li>
+                            <li><strong>Shared across every graph:</strong> Custom colors — assign a color to each data series, or highlight individual data points; colors are shared by every graph drawn from the same table</li>
+                            <li><strong>Regression overlay</strong> — draw a linked linear-regression fit line, 95% confidence band, and equation with R² directly on scatter plots</li>
+                            <li><strong>Interactive rendering</strong> — zoom in and out, adjust axes thickness and font size</li>
+                            <li><strong>Resizable graphs</strong> — drag any axis to resize, with a live size readout to match dimensions across graphs</li>
+                            <li><strong>Axis control</strong> — manual or automatic min/max/step</li>
+                            <li><strong>Error bars</strong> — SD, SEM, or none</li>
+                            <li><strong>Significance annotations</strong> — stars or p-values with pairwise comparisons</li>
+                            <li><strong>Export to</strong> PNG, JPG, or SVG; copy to clipboard</li>
                         </ul>
                     </div>
                 </article>
 
                 <article class="feature-card">
-                    <h3>Projects &amp; Interface</h3>
+                    <h3>Projects & Interface</h3>
                     <div class="card-scroll">
                         <ul>
-                            <li><strong>Native .hlx project format:</strong> (JSON-based, fully portable) — open and edit with any text editor</li>
-                            <li><strong>Native menu bar:</strong> with keyboard shortcuts</li>
-                            <li><strong>Decimal separator conversion:</strong> automatically convert commas to periods in all spreadsheet numbers (required for R compatibility)</li>
-                            <li><strong>Themes:</strong> Light, dark, or automatic theme</li>
+                            <li><strong>Native .hlx project format</strong> (JSON-based, fully portable) — open and edit with any text editor</li>
+                            <li><strong>Native menu bar</strong> with keyboard shortcuts</li>
+                            <li><strong>Decimal separator conversion</strong> — automatically convert commas to periods in all spreadsheet numbers (required for R compatibility)</li>
+                            <li><strong>Light, dark, or automatic theme</strong></li>
                         </ul>
                     </div>
                 </article>
