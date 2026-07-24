@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <!-- Viewport corrigé pour l'accessibilité -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Helix: Free alternative to GraphPad Prism for macOS. Scientific data analysis software for PhD students, postdocs, and researchers. Statistical analysis, regression testing, and publication-ready graphs powered by R and Plotly.">
-    <meta name="keywords" content="GraphPad Prism alternative, free scientific software, scientific data analysis, statistical analysis tool, publication graphs, macOS data analysis">
     <meta name="author" content="mickaphd">
     <meta name="theme-color" content="#030303">
     <meta name="apple-mobile-web-app-capable" content="yes">
@@ -26,7 +26,7 @@
     <meta name="twitter:description" content="Free scientific data analysis software for PhD students, postdocs &amp; researchers. Statistical analysis, publication-ready graphs, open source.">
     <meta name="twitter:image" content="https://helix-desktop.vercel.app/resources/app-icon.png">
     
-    <!-- Structured Data - SoftwareApplication -->
+    <!-- Structured Data Cleaned -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -46,45 +46,16 @@
         "@type": "Person",
         "name": "mickaphd"
       },
-      "downloadUrl": "https://www.glaze.app/app/helix-nSaq7x",
-      "keywords": "GraphPad Prism alternative, scientific data analysis, statistical software, free graphing"
+      "downloadUrl": "https://www.glaze.app/app/helix-nSaq7x"
     }
     </script>
 
-    <!-- Structured Data - Organization -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Helix",
-      "url": "https://helix-desktop.vercel.app",
-      "logo": "https://helix-desktop.vercel.app/resources/app-icon.png",
-      "description": "Free, open source scientific data analysis software for macOS. Built for PhD students, postdocs, and academic researchers."
-    }
-    </script>
-
-    <!-- Breadcrumb Schema -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {
-          "@type": "ListItem",
-          "position": 1,
-          "name": "Home",
-          "item": "https://helix-desktop.vercel.app"
-        }
-      ]
-    }
-    </script>
-    
+    <!-- Preloads & Fonts -->
     <link rel="preload" as="image" href="resources/app-icon.png">
     <link rel="preload" as="image" href="resources/Screenshot_1.png">
-    <link rel="preload" as="image" href="resources/Screenshot_2.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" as="style">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <link rel="icon" type="image/png" href="resources/app-icon.png">
     <link rel="apple-touch-icon" href="resources/app-icon.png">
@@ -194,7 +165,7 @@
             word-break: break-word;
         }
 
-        h2 {
+        .hero-subtitle {
             font-size: 1.5rem;
             font-weight: 400;
             color: var(--text-muted);
@@ -275,6 +246,10 @@
             aspect-ratio: 16 / 9;
         }
 
+        .mosaic-item:focus-visible {
+            outline: 2px solid var(--accent);
+        }
+
         .mosaic-item:hover {
             transform: translateY(-4px);
             border-color: rgba(255, 255, 255, 0.2);
@@ -352,6 +327,8 @@
             cursor: pointer;
             line-height: 1;
             transition: color var(--transition);
+            background: none;
+            border: none;
         }
 
         .lightbox-close:hover {
@@ -364,7 +341,7 @@
             animation: fadeInUp 1s ease-out 0.3s both;
         }
 
-        .features-header h3 {
+        .features-header h2 {
             font-size: 2rem;
             font-weight: 600;
             letter-spacing: -0.02em;
@@ -396,7 +373,7 @@
             transform: translateY(-4px);
         }
 
-        .feature-card h4 {
+        .feature-card h3 {
             font-size: 1.25rem;
             margin-bottom: 18px;
             color: var(--accent);
@@ -450,7 +427,7 @@
             content: "→";
             position: absolute;
             left: 0;
-            color: #52525b;
+            color: #71717a;
         }
 
         .feature-card li strong {
@@ -482,7 +459,7 @@
             text-align: center;
             padding: 40px 0;
             border-top: 1px solid var(--border-color);
-            color: #52525b;
+            color: #71717a;
             font-size: 0.9rem;
             position: relative;
             cursor: pointer;
@@ -556,15 +533,15 @@
             .mosaic-gallery { grid-template-columns: repeat(2, 1fr); gap: 12px; }
             .features { grid-template-columns: repeat(1, 1fr); gap: 16px; }
             h1 { font-size: 2.5rem; }
-            h2 { font-size: 1.2rem; }
+            .hero-subtitle { font-size: 1.2rem; }
             .hero { padding: 60px 0 40px; gap: 20px; }
             .cta-button { padding: 14px 28px; font-size: 1rem; }
             .description { font-size: 1rem; margin-bottom: 24px; }
             .logo-img { width: 160px; height: 160px; margin-bottom: 24px; }
             .feature-card { padding: 20px; height: 320px; }
-            .feature-card h4 { font-size: 1.1rem; margin-bottom: 14px; }
+            .feature-card h3 { font-size: 1.1rem; margin-bottom: 14px; }
             .feature-card li { font-size: 0.85rem; margin-bottom: 10px; }
-            .features-header h3 { font-size: 1.6rem; margin-bottom: 32px; }
+            .features-header h2 { font-size: 1.6rem; margin-bottom: 32px; }
             .screenshot-section { padding: 16px 0 60px; }
             .lightbox-close { top: 16px; right: 16px; font-size: 32px; }
             footer:hover .footer-main { opacity: 1; }
@@ -579,7 +556,7 @@
             .logo-img { width: 130px; height: 130px; margin-bottom: 20px; }
             h1 { font-size: 2rem; }
             .feature-card { padding: 16px; height: 300px; }
-            .feature-card h4 { font-size: 1rem; margin-bottom: 12px; }
+            .feature-card h3 { font-size: 1rem; margin-bottom: 12px; }
             .feature-card li { font-size: 0.82rem; padding-left: 18px; margin-bottom: 8px; }
             footer { padding: 32px 0; font-size: 0.82rem; }
             .footer-text { font-size: 0.8rem; }
@@ -599,9 +576,9 @@
     <main class="container">
         <header class="hero">
             <div class="hero-left">
-                <img src="resources/app-icon.png" alt="Helix app icon - free GraphPad Prism alternative" class="logo-img">
+                <img src="resources/app-icon.png" alt="Helix app icon - free GraphPad Prism alternative" class="logo-img" width="240" height="240">
                 <h1>Helix</h1>
-                <h2>Scientific data analysis,<br>simplified.</h2>
+                <p class="hero-subtitle">Scientific data analysis,<br>simplified.</p>
             </div>
             
             <div class="hero-right">
@@ -614,28 +591,29 @@
             </div>
         </header>
 
-        <section class="screenshot-section">
+        <section class="screenshot-section" aria-label="App Screenshots">
             <div class="mosaic-gallery">
-                <div class="mosaic-item"><img src="resources/Screenshot_1.png" alt="Helix scientific data analysis interface - spreadsheet view" loading="lazy" width="400" height="225"></div>
-                <div class="mosaic-item"><img src="resources/Screenshot_2.png" alt="Helix publication-ready graphs and data visualization" loading="lazy" width="400" height="225"></div>
-                <div class="mosaic-item"><img src="resources/Screenshot_3.png" alt="Helix statistical analysis panel" loading="lazy" width="400" height="225"></div>
-                <div class="mosaic-item"><img src="resources/Screenshot_4.png" alt="Helix regression analysis and curve fitting" loading="lazy" width="400" height="225"></div>
-                <div class="mosaic-item"><img src="resources/Screenshot_5.png" alt="Helix interactive data visualization" loading="lazy" width="400" height="225"></div>
-                <div class="mosaic-item"><img src="resources/Screenshot_6.png" alt="Helix export publication-ready graphs" loading="lazy" width="400" height="225"></div>
-                <div class="mosaic-item"><img src="resources/Screenshot_7.png" alt="Helix lab data management and organization" loading="lazy" width="400" height="225"></div>
-                <div class="mosaic-item"><img src="resources/Screenshot_8.png" alt="Helix R statistical engine" loading="lazy" width="400" height="225"></div>
-                <div class="mosaic-item"><img src="resources/Screenshot_9.png" alt="Helix open source free research software" loading="lazy" width="400" height="225"></div>
+                <!-- Retrait de loading="lazy" sur la première image au-dessus ou proche du viewport -->
+                <div class="mosaic-item" tabindex="0" role="button" aria-label="View screenshot 1 full size"><img src="resources/Screenshot_1.png" alt="Helix scientific data analysis interface - spreadsheet view" width="400" height="225"></div>
+                <div class="mosaic-item" tabindex="0" role="button" aria-label="View screenshot 2 full size"><img src="resources/Screenshot_2.png" alt="Helix publication-ready graphs and data visualization" loading="lazy" width="400" height="225"></div>
+                <div class="mosaic-item" tabindex="0" role="button" aria-label="View screenshot 3 full size"><img src="resources/Screenshot_3.png" alt="Helix statistical analysis panel" loading="lazy" width="400" height="225"></div>
+                <div class="mosaic-item" tabindex="0" role="button" aria-label="View screenshot 4 full size"><img src="resources/Screenshot_4.png" alt="Helix regression analysis and curve fitting" loading="lazy" width="400" height="225"></div>
+                <div class="mosaic-item" tabindex="0" role="button" aria-label="View screenshot 5 full size"><img src="resources/Screenshot_5.png" alt="Helix interactive data visualization" loading="lazy" width="400" height="225"></div>
+                <div class="mosaic-item" tabindex="0" role="button" aria-label="View screenshot 6 full size"><img src="resources/Screenshot_6.png" alt="Helix export publication-ready graphs" loading="lazy" width="400" height="225"></div>
+                <div class="mosaic-item" tabindex="0" role="button" aria-label="View screenshot 7 full size"><img src="resources/Screenshot_7.png" alt="Helix lab data management and organization" loading="lazy" width="400" height="225"></div>
+                <div class="mosaic-item" tabindex="0" role="button" aria-label="View screenshot 8 full size"><img src="resources/Screenshot_8.png" alt="Helix R statistical engine" loading="lazy" width="400" height="225"></div>
+                <div class="mosaic-item" tabindex="0" role="button" aria-label="View screenshot 9 full size"><img src="resources/Screenshot_9.png" alt="Helix open source free research software" loading="lazy" width="400" height="225"></div>
             </div>
         </section>
 
         <section class="features-section">
             <div class="features-header">
-                <h3>Key Features</h3>
+                <h2>Key Features</h2>
             </div>
             
             <div class="features">
                 <article class="feature-card">
-                    <h4>Release Notes</h4>
+                    <h3>Release Notes</h3>
                     <div class="card-scroll">
                         <div class="release-item">
                             <span class="release-badge">v3.0 — Latest</span>
@@ -669,7 +647,7 @@
                 </article>
 
                 <article class="feature-card">
-                    <h4>Data Organization</h4>
+                    <h3>Data Organization</h3>
                     <div class="card-scroll">
                         <ul>
                             <li><strong>Three-pillar structure:</strong> Tables → Analyses / Graphs, with every analysis and graph linked back to its source table</li>
@@ -681,7 +659,7 @@
                 </article>
 
                 <article class="feature-card">
-                    <h4>Statistical Analyses</h4>
+                    <h3>Statistical Analyses</h3>
                     <div class="card-scroll">
                         <ul>
                             <li><strong>Smart guided wizards:</strong> for test selection based on your table type</li>
@@ -699,7 +677,7 @@
                 </article>
 
                 <article class="feature-card">
-                    <h4>Graphs</h4>
+                    <h3>Graphs</h3>
                     <div class="card-scroll">
                         <ul>
                             <li><strong>Chart types:</strong> Individual values, box plots, violin plots, scatter, line, bars, area, stacked bars</li>
@@ -716,7 +694,7 @@
                 </article>
 
                 <article class="feature-card">
-                    <h4>Projects &amp; Interface</h4>
+                    <h3>Projects &amp; Interface</h3>
                     <div class="card-scroll">
                         <ul>
                             <li><strong>Native .hlx project format:</strong> (JSON-based, fully portable) — open and edit with any text editor</li>
@@ -740,7 +718,7 @@
     </footer>
 
     <div class="lightbox" id="lightbox" aria-hidden="true">
-        <span class="lightbox-close" id="lightbox-close" aria-label="Close fullscreen">&times;</span>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close fullscreen">&times;</button>
         <img id="lightbox-img" src="" alt="">
     </div>
 
@@ -752,15 +730,23 @@
             const lightboxClose = document.getElementById('lightbox-close');
             const footer = document.querySelector('footer');
 
+            const openLightbox = (item) => {
+                const img = item.querySelector('img');
+                if (img) {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt || 'Enlarged view';
+                    lightbox.classList.add('active');
+                    lightbox.setAttribute('aria-hidden', 'false');
+                    document.body.style.overflow = 'hidden';
+                }
+            };
+
             mosaicItems.forEach(item => {
-                item.addEventListener('click', () => {
-                    const img = item.querySelector('img');
-                    if (img) {
-                        lightboxImg.src = img.src;
-                        lightboxImg.alt = img.alt || 'Enlarged view';
-                        lightbox.classList.add('active');
-                        lightbox.setAttribute('aria-hidden', 'false');
-                        document.body.style.overflow = 'hidden';
+                item.addEventListener('click', () => openLightbox(item));
+                item.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        openLightbox(item);
                     }
                 });
             });
