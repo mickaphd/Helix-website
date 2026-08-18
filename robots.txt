@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://helix-desktop.vercel.app/sitemap.xml
+Sitemap: https://helix-desktop.com/sitemap.xml
