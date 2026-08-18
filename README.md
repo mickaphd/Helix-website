@@ -15,7 +15,7 @@
   <br />
 
   <p style="font-size: 1.1rem; font-weight: 500;">
-    <a href="https://helix-desktop.vercel.app">🌐 Website</a>
+    <a href="https://helix-desktop.com">🌐 Website</a>
     &nbsp;•&nbsp;
     <a href="https://www.glaze.app/app/helix-nSaq7x">⚡ Download via Glaze</a>
   </p>
