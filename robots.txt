@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://helix-desktop.com/sitemap.xml
+Sitemap: https://www.helix-desktop.com/sitemap.xml
