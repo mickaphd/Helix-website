@@ -1,0 +1,25 @@
+# Helix
+
+> Helix is a free, open-source (GPL-3.0) and private alternative to GraphPad Prism for macOS. It organizes, analyzes and visualizes scientific data, from raw numbers to publication-ready graphs. Statistics are computed by R (through webR, R compiled to WebAssembly) and graphs by Plotly, entirely on the user's Mac.
+
+Helix is made by mickaphd, a scientist in Paris, with the help of Claude Code. It requires macOS 13 (Ventura) or later and runs on Apple Silicon and Intel Macs. It is not signed by Apple yet, so macOS asks users to allow it once in System Settings › Privacy & Security.
+
+Each table holds its own analyses and graphs, which update as soon as the data change.
+
+- Tables: Column, XY, Grouped, Multiple Variables and Contingency; copy and paste with Excel or Numbers; exclude values without deleting them.
+- Analyses (guided assistants, computed by R): descriptive statistics, outlier detection (ROUT), unpaired, Welch, paired and ratio t tests, Mann-Whitney, Wilcoxon, one-way and repeated-measures ANOVA, Kruskal-Wallis, Friedman, multiple comparisons (Tukey, Bonferroni, Dunn), two-way ANOVA (ordinary, repeated measures, Scheirer-Ray-Hare), multiple t tests with Holm or FDR correction, Pearson and Spearman correlation, linear and nonlinear regression (dose-response, 4PL), multiple regression, area under the curve, chi-square and Fisher's exact test.
+- Graphs: individual values, box and violin plots, bars, lines, scatter plots, dose-response curves, Kaplan-Meier survival curves, heatmaps, pie charts, volcano plots; significance stars and regression lines from the analyses; export as PNG (300 dpi), SVG or JPG.
+- Privacy: no account, no cloud, no telemetry; the only connection is a daily check on GitHub for a newer version.
+- Open file format: Helix projects (.hlx) are plain JSON.
+
+## Links
+
+- [Website](https://www.helix-desktop.com/): overview, features and screenshots
+- [Installation guide](https://www.helix-desktop.com/install/): download, first launch on macOS, updates
+- [Download](https://github.com/mickaphd/Helix/releases/latest): latest release, one DMG for Apple Silicon and one for Intel
+- [Source code](https://github.com/mickaphd/Helix): GitHub repository and README
+- [File format](https://github.com/mickaphd/Helix/blob/main/FILE-FORMAT.md): description of .hlx projects
+- [Discussions](https://github.com/mickaphd/Helix/discussions): questions and ideas
+- [Issues](https://github.com/mickaphd/Helix/issues): bug reports
+
+GraphPad Prism is a trademark of GraphPad Software, LLC. Helix is an independent project, not affiliated with or endorsed by GraphPad Software.
