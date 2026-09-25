@@ -1,0 +1,4 @@
+.DS_Store
+# Raw PNG captures: only the converted WebP files in resources/screenshots/ go online
+captures/*.png
+.claude/
