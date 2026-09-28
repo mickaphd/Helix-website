@@ -2,7 +2,12 @@
   "trailingSlash": true,
   "redirects": [
     {
-      "source": "/install/:path*",
+      "source": "/install",
+      "destination": "/#download",
+      "permanent": true
+    },
+    {
+      "source": "/install/",
       "destination": "/#download",
       "permanent": true
     }
