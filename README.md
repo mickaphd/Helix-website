@@ -24,7 +24,7 @@
 
 A plain static site (HTML and CSS, no build step), deployed by Vercel on every push to `main`.
 
-- `index.html`: home page · `install/index.html`: download and first-launch guide · `404.html`
+- `index.html`: home page · `404.html`: page not found · `llms.txt`: summary for AI assistants
 - `assets/`: shared stylesheet and script
 - `resources/screenshots/`: screenshots in WebP, made from the PNGs in `captures/` (not in git) with
   `sh scripts/prepare-images.sh` (needs `brew install webp ffmpeg`)

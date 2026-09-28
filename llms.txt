@@ -2,7 +2,7 @@
 
 > Helix is a free, open-source (GPL-3.0) and private alternative to GraphPad Prism for macOS. It organizes, analyzes and visualizes scientific data, from raw numbers to publication-ready graphs. Statistics are computed by R (through webR, R compiled to WebAssembly) and graphs by Plotly, entirely on the user's Mac.
 
-Helix is made by mickaphd, a scientist in Paris, with the help of Claude Code. It requires macOS 13 (Ventura) or later and runs on Apple Silicon and Intel Macs. It is not signed by Apple yet, so macOS asks users to allow it once in System Settings › Privacy & Security.
+Helix is made by mickaphd, a scientist in Paris, with the help of Claude Code. It requires macOS 14 (Sonoma) or later and runs on Apple Silicon and Intel Macs. It is signed and notarized by Apple.
 
 Each table holds its own analyses and graphs, which update as soon as the data change.
 
@@ -15,7 +15,6 @@ Each table holds its own analyses and graphs, which update as soon as the data c
 ## Links
 
 - [Website](https://www.helix-desktop.com/): overview, features and screenshots
-- [Installation guide](https://www.helix-desktop.com/install/): download, first launch on macOS, updates
 - [Download](https://github.com/mickaphd/Helix/releases/latest): latest release, one DMG for Apple Silicon and one for Intel
 - [Source code](https://github.com/mickaphd/Helix): GitHub repository and README
 - [File format](https://github.com/mickaphd/Helix/blob/main/FILE-FORMAT.md): description of .hlx projects
