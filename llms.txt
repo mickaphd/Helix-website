@@ -10,7 +10,7 @@ Each table holds its own analyses and graphs, which update as soon as the data c
 - Analyses (guided assistants, computed by R): descriptive statistics, outlier detection (ROUT), unpaired, Welch, paired and ratio t tests, Mann-Whitney, Wilcoxon, one-way and repeated-measures ANOVA, Kruskal-Wallis, Friedman, multiple comparisons (Tukey, Bonferroni, Dunn), two-way ANOVA (ordinary, repeated measures, Scheirer-Ray-Hare), multiple t tests with Holm or FDR correction, Pearson and Spearman correlation, linear and nonlinear regression (dose-response, 4PL), multiple regression, area under the curve, chi-square and Fisher's exact test.
 - Graphs: individual values, box and violin plots, bars, lines, scatter plots, dose-response curves, Kaplan-Meier survival curves, heatmaps, pie charts, volcano plots; significance stars and regression lines from the analyses; export as PNG (300 dpi), SVG or JPG.
 - Privacy: no account, no cloud, no telemetry; the only connection is a daily check on GitHub for a newer version.
-- Open file format: Helix projects (.hlx) are plain JSON.
+- Projects: several projects open at once, each in its own window; open projects come back at the next launch. Helix projects (.hlx) are plain JSON.
 
 ## Links
 
