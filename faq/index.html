@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Helix FAQ: free statistics and graphs app for Mac</title>
+    <meta name="description" content="Answers about Helix, the free, open-source and private alternative to GraphPad Prism for macOS: requirements, privacy, statistical tests, exporting graphs, updates and support.">
+    <meta name="robots" content="max-image-preview:large">
+    <meta name="theme-color" content="#030303">
+    <link rel="canonical" href="https://www.helix-desktop.com/faq/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Helix">
+    <meta property="og:url" content="https://www.helix-desktop.com/faq/">
+    <meta property="og:title" content="Helix FAQ">
+    <meta property="og:description" content="Answers about Helix, the free, open-source and private alternative to GraphPad Prism for macOS.">
+    <meta property="og:image" content="https://www.helix-desktop.com/resources/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="../resources/favicon.png">
+    <link rel="apple-touch-icon" href="../resources/apple-touch-icon.png">
+    <link rel="stylesheet" href="../assets/site.css">
+    <script src="../assets/site.js" defer></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+        <div class="container">
+            <a class="brand" href="/"><img src="../resources/app-icon-64.webp" alt="" width="28" height="28">Helix</a>
+            <nav class="nav" aria-label="Main">
+                <a class="hide-sm" href="/#features">Features</a>
+                <a class="hide-sm" href="/#privacy">Privacy</a>
+                <a href="/faq/" aria-current="page">FAQ</a>
+                <a href="https://github.com/mickaphd/Helix">GitHub</a>
+                <a class="btn btn-small" href="https://github.com/mickaphd/Helix/releases/latest">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container narrow">
+            <div class="page-head">
+                <h1>Frequently asked questions</h1>
+                <p>Can’t find your answer? Ask in the <a href="https://github.com/mickaphd/Helix/discussions">Discussions</a>.</p>
+            </div>
+
+            <div class="faq" itemscope itemtype="https://schema.org/FAQPage">
+                <details id="what-is-helix" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">What is Helix?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Helix is a Mac app to organize, analyze and visualize scientific data, from raw numbers to publication-ready graphs. It’s a free, open-source and private alternative to GraphPad Prism: each table holds its own analyses and graphs, which update as soon as the data change.</p>
+                    </div>
+                </details>
+
+                <details id="free" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Is Helix really free?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes. Helix is free and open source, under the GPL-3.0 license: no account, no subscription, no paid version. If it saves you time, you can <a href="https://www.buymeacoffee.com/mickaphd">buy me a coffee</a>.</p>
+                    </div>
+                </details>
+
+                <details id="requirements" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Which Macs does Helix run on?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Any Mac with macOS 14 (Sonoma) or later. There are two downloads: <code>aarch64</code> for Apple Silicon (M1 and later) and <code>x64</code> for Intel Macs. Not sure which one you have? Apple menu › About This Mac shows your chip.</p>
+                    </div>
+                </details>
+
+                <details id="install-r" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Do I need to install R?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">No. R runs inside Helix through <a href="https://github.com/r-wasm/webr">webR</a>, so there is nothing else to install or configure.</p>
+                    </div>
+                </details>
+
+                <details id="windows-linux" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Is there a Windows or Linux version?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Not for now: Helix is made for macOS. Never say never, though.</p>
+                    </div>
+                </details>
+
+                <details id="tauri" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Why is Helix built with Tauri and not Swift?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Helix’s two engines are web technologies: R runs through <a href="https://github.com/r-wasm/webr">webR</a> (R compiled to WebAssembly) and the graphs are drawn by Plotly, a JavaScript library. <a href="https://tauri.app">Tauri</a> runs them in macOS’s own web engine, inside a small native shell written in Rust. Unlike Electron, it doesn’t ship a whole browser, so Helix stays light and fast, with real Mac menus and shortcuts.</p>
+                    </div>
+                </details>
+
+                <details id="ai" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Is Helix made with AI?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Partly, and openly. Most of Helix, by size, is two open-source engines I didn’t write: <a href="https://github.com/r-wasm/webr">webR</a>, which brings R to the app, and <a href="https://plotly.com/javascript/">Plotly</a>, which draws the graphs. My job is everything around them: the tables, the guided assistants, the graph settings and the Mac app itself. I build it with Claude Code, Anthropic’s AI coding assistant, which spends an unreasonable amount of time auditing and optimizing the code, and running the tests that check every analysis against R. It never complains, never sleeps, and would refactor the whole app for breakfast if I let it! The whole history is <a href="https://github.com/mickaphd/Helix/commits/main">public on GitHub</a>.</p>
+                    </div>
+                </details>
+
+                <details id="safe" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Is Helix safe to install?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Helix is signed and notarized by Apple, so macOS knows where it comes from and has checked it. Its code is public on <a href="https://github.com/mickaphd/Helix">GitHub</a>, and each download is built by GitHub directly from that public code. Want to double-check? Feel free to drop the DMG on <a href="https://www.virustotal.com">VirusTotal</a>, which scans it with dozens of antivirus engines.</p>
+                    </div>
+                </details>
+
+                <details id="privacy" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Do my data leave my Mac?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">No. Helix works entirely on your Mac, without an account, a cloud or any telemetry. Its only connection is a daily check on GitHub for a newer version.</p>
+                    </div>
+                </details>
+
+                <details id="offline" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Does Helix work offline?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes. Analyses and graphs run entirely on your Mac. An internet connection is only used for the daily check for a newer version.</p>
+                    </div>
+                </details>
+
+                <details id="excel" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Can I use my data from Excel?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes: copy your values in Excel or Numbers and paste them into a Helix table. Copying from Helix to a spreadsheet works too.</p>
+                    </div>
+                </details>
+
+                <details id="sample" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Is there an example to get started?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes: Help › Sample Project opens a ready-made project with many kinds of tables, analyses and graphs to explore.</p>
+                    </div>
+                </details>
+
+                <details id="tests" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Which statistical tests does Helix offer?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Descriptive statistics and outlier detection (ROUT); t tests (unpaired, Welch, paired, ratio), Mann-Whitney and Wilcoxon; one-way and repeated-measures ANOVA, Kruskal-Wallis and Friedman, with multiple comparisons (Tukey, Bonferroni, Dunn); two-way ANOVA and multiple t tests; Pearson and Spearman correlation; linear, nonlinear (dose-response, 4PL) and multiple regression; area under the curve; chi-square and Fisher’s exact test. Guided assistants help you pick the right one. This is a foundation, not a finished list: if a test you need is missing, say so in the <a href="https://github.com/mickaphd/Helix/discussions">Discussions</a>.</p>
+                    </div>
+                </details>
+
+                <details id="reliable" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Can I trust the results?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">That was priority number one. Rather than rewriting statistics from scratch, Helix relies on tools that have proven themselves and are accepted by the scientific community: every result is computed by R, the reference for statistics, running inside the app through webR. Choosing R was the first decision, and Helix was built around it. On top of that, an automated test suite checks every analysis and graph against R.</p>
+                    </div>
+                </details>
+
+                <details id="export" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">How do I export my graphs for a paper?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Export as PNG (up to 600 dpi), SVG or JPG, with a white or transparent background, or copy and paste the graph anywhere. You can set exact sizes, or resize a graph by dragging an axis.</p>
+                    </div>
+                </details>
+
+                <details id="file-format" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">What is a .hlx file? Am I locked in?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">A Helix project (<code>.hlx</code>) is a plain JSON file, <a href="https://github.com/mickaphd/Helix/blob/main/FILE-FORMAT.md">documented in the open</a>. Your data stay readable with or without Helix. That was essential from the start: your data should never be locked into an app, Helix included.</p>
+                    </div>
+                </details>
+
+                <details id="updates" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">How do I update Helix?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Helix checks once a day and tells you when a new version is out (Helix › Check for Updates…). Download it and replace the old app in your Applications folder; your projects are not affected. See what changed in the <a href="https://github.com/mickaphd/Helix/releases">release notes</a>.</p>
+                    </div>
+                </details>
+
+                <details id="feature" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">How can I suggest a feature?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Share your idea in the <a href="https://github.com/mickaphd/Helix/discussions">Discussions</a> on GitHub. Feedback from people using Helix shapes what comes next.</p>
+                    </div>
+                </details>
+
+                <details id="help" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">How can I ask a question or report a bug?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Ask questions and share ideas in the <a href="https://github.com/mickaphd/Helix/discussions">Discussions</a>. To report a bug, <a href="https://github.com/mickaphd/Helix/issues">open an issue</a> on GitHub.</p>
+                    </div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <span class="signature">
+                    <span class="main">Thought and designed by a scientist, for scientists</span>
+                    <span class="alt" aria-hidden="true">Made with ❤️ by micka from Paris</span>
+                </span>
+                <nav class="footer-links" aria-label="Footer">
+                    <a href="/faq/">FAQ</a>
+                    <a href="https://github.com/mickaphd/Helix">Source code</a>
+                    <a href="https://github.com/mickaphd/Helix/releases">Release notes</a>
+                    <a href="https://github.com/mickaphd/Helix/discussions">Discussions</a>
+                    <a href="https://github.com/mickaphd/Helix/issues">Report a problem</a>
+                    <a href="https://www.buymeacoffee.com/mickaphd">Buy me a coffee</a>
+                </nav>
+            </div>
+            <p class="legal">
+                © 2026 mickaphd · Helix is free software, licensed under the <a href="https://github.com/mickaphd/Helix/blob/main/LICENSE">GPL-3.0</a>.<br>
+                GraphPad Prism is a trademark of GraphPad Software, LLC. Helix is an independent project, not affiliated with or endorsed by GraphPad Software.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

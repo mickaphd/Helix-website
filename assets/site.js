@@ -25,3 +25,6 @@ if (versionSlots.length) {
 }
 
 document.querySelector('.signature')?.addEventListener('click', (event) => event.currentTarget.classList.toggle('active'));
+
+const linked = location.hash.length > 1 && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+if (linked instanceof HTMLDetailsElement) linked.open = true;
