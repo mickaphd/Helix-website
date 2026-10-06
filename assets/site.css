@@ -123,8 +123,8 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 650; letter-spacing: -0
 .card a { color: var(--text); }
 .card .icon { width: 26px; height: 26px; color: var(--cream); margin-bottom: 14px; }
 .card code { font-family: var(--mono); font-size: 0.88em; }
-.made-with { max-width: 720px; margin: 40px auto 0; text-align: center; color: var(--text-muted); font-size: 0.95rem; }
-.made-with strong, .made-with a { color: var(--text); }
+.made-with { max-width: 680px; margin: 40px auto 0; text-align: center; color: var(--text-faint); font-size: 0.88rem; }
+.made-with a { color: var(--text-muted); }
 
 .feature { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: center; padding: 40px 0; }
 .feature.reverse { grid-template-columns: 7fr 5fr; }
@@ -150,6 +150,18 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 650; letter-spacing: -0
 .download-band .cta-row { justify-content: center; }
 .download-band .chips { max-width: 560px; margin: 28px auto 0; text-align: left; }
 .download-band .fineprint { margin: 18px auto 0; }
+.download-band .coffee { margin: 28px auto 12px; padding-top: 24px; border-top: 1px solid var(--border); font-size: 0.95rem; }
+
+@font-face { font-family: "Cookie"; src: url("cookie-subset.woff2") format("woff2"); font-display: swap; }
+.bmc {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 18px 8px; border: 1px solid #000; border-radius: 10px;
+    background: #f0ebce; color: #000; text-decoration: none;
+    font-family: "Cookie", cursive; font-size: 1.75rem; line-height: 1;
+    transition: transform var(--ease);
+}
+.bmc:hover { transform: translateY(-2px); }
+.bmc img { width: 16px; }
 
 .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .chip { border: 1px solid var(--border); background: var(--card); border-radius: 14px; padding: 16px 20px; }
