@@ -162,6 +162,10 @@ h2 { font-size: clamp(1.7rem, 4vw, 2.4rem); font-weight: 650; letter-spacing: -0
 }
 .bmc:hover { transform: translateY(-2px); }
 .bmc img { width: 16px; }
+.support { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 12px; }
+.alternativeto { display: inline-flex; transition: transform var(--ease); }
+.alternativeto:hover { transform: translateY(-2px); }
+.alternativeto img { width: auto; height: 44px; }
 
 .chips { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
 .chip { border: 1px solid var(--border); background: var(--card); border-radius: 14px; padding: 16px 20px; }
