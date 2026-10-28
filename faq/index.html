@@ -68,7 +68,7 @@
                 <details id="requirements" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <summary itemprop="name">Which Macs does Helix run on?</summary>
                     <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Any Mac with macOS 14 (Sonoma) or later. There are two downloads: <code>aarch64</code> for Apple Silicon (M1 and later) and <code>x64</code> for Intel Macs. Not sure which one you have? Apple menu › About This Mac shows your chip.</p>
+                        <p itemprop="text">Any Mac with macOS 13.3 (Ventura) or later. There are two downloads: <code>aarch64</code> for Apple Silicon (M1 and later) and <code>x64</code> for Intel Macs. Not sure which one you have? Apple menu › About This Mac shows your chip.</p>
                     </div>
                 </details>
 
@@ -96,7 +96,7 @@
                 <details id="ai" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <summary itemprop="name">Is Helix made with AI?</summary>
                     <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Partly, and openly. Most of Helix, by size, is two open-source engines I didn’t write: <a href="https://github.com/r-wasm/webr">webR</a>, which brings R to the app, and <a href="https://plotly.com/javascript/">Plotly</a>, which draws the graphs. My job is everything around them: the tables, the guided assistants, the graph settings and the Mac app itself. I build it with Claude Code, Anthropic’s AI coding assistant, which spends an unreasonable amount of time auditing and optimizing the code, and running the tests that check every analysis against R. It never complains, never sleeps, and would refactor the whole app for breakfast if I let it! The whole history is <a href="https://github.com/mickaphd/Helix/commits/main">public on GitHub</a>.</p>
+                        <p itemprop="text">Partly, and openly. Most of Helix, by size, is two open-source engines I didn’t write: <a href="https://github.com/r-wasm/webr">webR</a>, which brings R to the app, and <a href="https://plotly.com/javascript/">Plotly</a>, which draws the graphs. My job is everything around them: the tables, the guided assistants, the graph settings and the Mac app itself. I build it with Claude Code, Anthropic’s AI coding assistant, which spends an unreasonable amount of time auditing and optimizing the code, and running the tests that check every analysis against R. It never complains, never sleeps, and would refactor the whole app for breakfast if I let it! One thing it never does is copy: Helix takes inspiration from the tools scientists already know, but it is written from scratch, with no code taken or reverse-engineered from any other software. The whole history is <a href="https://github.com/mickaphd/Helix/commits/main">public on GitHub</a>, so anyone can check.</p>
                     </div>
                 </details>
 
@@ -152,7 +152,14 @@
                 <details id="export" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <summary itemprop="name">How do I export my graphs for a paper?</summary>
                     <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Export as PNG (up to 600 dpi), SVG or JPG, with a white or transparent background, or copy and paste the graph anywhere. You can set exact sizes, or resize a graph by dragging an axis.</p>
+                        <p itemprop="text">Export as PNG at 150, 300 or 600 dpi, SVG or JPG, with a white or transparent background, or copy and paste the graph anywhere. You can set exact sizes, or resize a graph by dragging an axis.</p>
+                    </div>
+                </details>
+
+                <details id="same-look" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">Can I make all my graphs look the same?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <p itemprop="text">Yes. Match gives a graph the look of another one, and you choose what it takes: colors, points, error bars, text, size… You can also make your own palettes (Series › Palette › New Palette…), and even your own gradients for heatmaps. They stay on your Mac, ready in every project, and you can keep a palette from a project a colleague sent you.</p>
                     </div>
                 </details>
 
