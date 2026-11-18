@@ -1,11 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://www.helix-desktop.com/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-18</lastmod>
+    <image:image>
+      <image:loc>https://www.helix-desktop.com/resources/screenshots/01-overview.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.helix-desktop.com/resources/screenshots/02-table.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.helix-desktop.com/resources/screenshots/03-wizard.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.helix-desktop.com/resources/screenshots/04-results.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.helix-desktop.com/resources/screenshots/05-bars.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.helix-desktop.com/resources/screenshots/06-dose-response.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.helix-desktop.com/resources/screenshots/07-volcano.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.helix-desktop.com/resources/screenshots/10-survival.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.helix-desktop.com/resources/screenshots/08-heatmap.webp</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.helix-desktop.com/resources/screenshots/09-dark.webp</image:loc>
+    </image:image>
   </url>
   <url>
     <loc>https://www.helix-desktop.com/faq/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-18</lastmod>
   </url>
 </urlset>

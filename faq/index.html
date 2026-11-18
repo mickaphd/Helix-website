@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Helix FAQ: free statistics and graphs app for Mac</title>
-    <meta name="description" content="Answers about Helix, the free, open-source and private alternative to GraphPad Prism for macOS: requirements, privacy, statistical tests, exporting graphs, updates and support.">
+    <meta name="description" content="Answers about Helix, the free, open-source alternative to GraphPad Prism for Mac: requirements, privacy, statistical tests (ANOVA, mixed models, survival), exporting graphs, citing Helix, updates.">
     <meta name="robots" content="max-image-preview:large">
     <meta name="theme-color" content="#030303">
     <link rel="canonical" href="https://www.helix-desktop.com/faq/">
@@ -18,6 +18,7 @@
     <meta property="og:image" content="https://www.helix-desktop.com/resources/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The Helix app showing a table, its analyses and a graph">
     <meta property="og:locale" content="en_US">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -110,14 +111,14 @@
                 <details id="privacy" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <summary itemprop="name">Do my data leave my Mac?</summary>
                     <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">No. Helix works entirely on your Mac, without an account, a cloud or any telemetry. Its only connection is a daily check on GitHub for a newer version.</p>
+                        <p itemprop="text">No. Helix works entirely on your Mac, without an account, a cloud or any telemetry. Its only connections are a daily check on GitHub for a newer version, and the updates you choose to install.</p>
                     </div>
                 </details>
 
                 <details id="offline" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <summary itemprop="name">Does Helix work offline?</summary>
                     <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Yes. Analyses and graphs run entirely on your Mac. An internet connection is only used for the daily check for a newer version.</p>
+                        <p itemprop="text">Yes. Analyses and graphs run entirely on your Mac. An internet connection is only used to check for a newer version and to download the updates you accept.</p>
                     </div>
                 </details>
 
@@ -138,7 +139,7 @@
                 <details id="tests" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <summary itemprop="name">Which statistical tests does Helix offer?</summary>
                     <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Descriptive statistics and outlier detection (ROUT); t tests (unpaired, Welch, paired, ratio), Mann-Whitney and Wilcoxon; one-way and repeated-measures ANOVA, Kruskal-Wallis and Friedman, with multiple comparisons (Tukey, Bonferroni, Dunn); two-way ANOVA and multiple t tests; Pearson and Spearman correlation; linear, nonlinear (dose-response, 4PL) and multiple regression; area under the curve; chi-square and Fisher’s exact test. Guided assistants help you pick the right one. This is a foundation, not a finished list: if a test you need is missing, say so in the <a href="https://github.com/mickaphd/Helix/discussions">Discussions</a>.</p>
+                        <p itemprop="text">Descriptive statistics, normality tests (Shapiro-Wilk) and outliers (ROUT, Grubbs); t tests (unpaired, Welch, paired, ratio, lognormal), Mann-Whitney and Wilcoxon, with effect sizes; one-way, Welch’s and repeated-measures ANOVA, mixed-effects models, Kruskal-Wallis and Friedman, with multiple comparisons (Tukey, Dunnett, Šidák, Holm-Šidák, Fisher’s LSD, Games-Howell, Dunn…); two-way ANOVA and multiple t tests; Pearson and Spearman correlation; linear, nonlinear (dose-response 3PL, 4PL and 5PL, growth, decay, Michaelis-Menten), logistic and multiple regression; standard curve interpolation, as for an ELISA; area under the curve; survival analysis (Kaplan-Meier, log-rank, hazard ratios, Cox regression); chi-square and Fisher’s exact test, with relative risk, odds ratio, sensitivity and specificity. Guided assistants help you pick the right one. This is a foundation, not a finished list: if a test you need is missing, say so in the <a href="https://github.com/mickaphd/Helix/discussions">Discussions</a>.</p>
                     </div>
                 </details>
 
@@ -146,6 +147,17 @@
                     <summary itemprop="name">Can I trust the results?</summary>
                     <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <p itemprop="text">That was priority number one. Rather than rewriting statistics from scratch, Helix relies on tools that have proven themselves and are accepted by the scientific community: every result is computed by R, the reference for statistics, running inside the app through webR. Choosing R was the first decision, and Helix was built around it. On top of that, an automated test suite checks every analysis and graph against R.</p>
+                    </div>
+                </details>
+
+                <details id="cite" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <summary itemprop="name">How do I cite Helix?</summary>
+                    <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>Helix has a permanent DOI on Zenodo, <a href="https://doi.org/10.5281/zenodo.24156418">10.5281/zenodo.24156418</a>, which always leads to the latest version. In your methods, you can write:</p>
+                            <p class="quote">“Statistical analyses and graphs were made with Helix (version X; https://doi.org/10.5281/zenodo.24156418), which computes its statistics with R.”</p>
+                            <p>Replace X with the version you used (Helix › About Helix). Since every result comes from R, it’s good practice to cite R too.</p>
+                        </div>
                     </div>
                 </details>
 
@@ -173,7 +185,7 @@
                 <details id="updates" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                     <summary itemprop="name">How do I update Helix?</summary>
                     <div class="answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                        <p itemprop="text">Helix checks once a day and tells you when a new version is out (Helix › Check for Updates…). Download it and replace the old app in your Applications folder; your projects are not affected. See what changed in the <a href="https://github.com/mickaphd/Helix/releases">release notes</a>.</p>
+                        <p itemprop="text">Helix updates itself. It checks once a day, asks before installing a new version, and relaunches with your projects. You can also check yourself with Helix › Check for Updates… See what changed in the <a href="https://github.com/mickaphd/Helix/releases">release notes</a>.</p>
                     </div>
                 </details>
 

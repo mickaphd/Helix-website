@@ -6,7 +6,7 @@
     <meta name="google-site-verification" content="44bbcg_zg1LNMdfkNHbp2J-FtkyaoW60NK-km2U-Y8E" />
 
     <title>Helix: Free GraphPad Prism Alternative for Mac | Scientific Data Analysis</title>
-    <meta name="description" content="Helix is a free, open-source and private alternative to GraphPad Prism for macOS. Organize, analyze and visualize scientific data, from raw numbers to publication-ready graphs, with statistics computed by R.">
+    <meta name="description" content="Helix is a free, open-source alternative to GraphPad Prism for Mac: t tests, ANOVA, mixed models, dose-response curves, survival analysis and publication-ready graphs, computed by R.">
     <meta name="robots" content="max-image-preview:large">
     <meta name="theme-color" content="#030303">
     <link rel="canonical" href="https://www.helix-desktop.com/">
@@ -15,7 +15,7 @@
     <meta property="og:site_name" content="Helix">
     <meta property="og:url" content="https://www.helix-desktop.com/">
     <meta property="og:title" content="Helix: scientific data analysis, simplified">
-    <meta property="og:description" content="A free, open-source and private alternative to GraphPad Prism for macOS. Tables, R-powered statistics and publication-ready graphs.">
+    <meta property="og:description" content="A free, open-source and private alternative to GraphPad Prism for macOS. Tables, statistics computed by R (ANOVA, regression, survival…) and publication-ready graphs.">
     <meta property="og:image" content="https://www.helix-desktop.com/resources/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -38,17 +38,32 @@
           "@type": "SoftwareApplication",
           "@id": "https://www.helix-desktop.com/#app",
           "name": "Helix",
+          "alternateName": ["Helix Data Analysis", "Helix for Mac"],
           "description": "Free, open-source and private alternative to GraphPad Prism for macOS. Organize, analyze and visualize scientific data, from raw numbers to publication-ready graphs, with statistics computed by R.",
           "url": "https://www.helix-desktop.com/",
           "image": "https://www.helix-desktop.com/resources/og-image.png",
           "screenshot": "https://www.helix-desktop.com/resources/screenshots/01-overview.webp",
           "applicationCategory": "EducationalApplication",
           "applicationSubCategory": "Scientific data analysis and statistics",
+          "keywords": "GraphPad Prism alternative, statistics, biostatistics, scientific graphs, R, macOS, t test, ANOVA, mixed-effects model, nonlinear regression, dose-response, IC50, EC50, Kaplan-Meier, survival analysis, volcano plot, heatmap",
+          "featureList": [
+            "Column, XY, Grouped, Multiple Variables, Contingency and Survival tables",
+            "t tests, Mann-Whitney and Wilcoxon tests with effect sizes",
+            "One-way, two-way and repeated-measures ANOVA, mixed-effects models, Kruskal-Wallis and Friedman tests with multiple comparisons",
+            "Linear, nonlinear (dose-response, IC50, EC50), logistic and multiple regression",
+            "Kaplan-Meier survival curves, log-rank test, hazard ratios and Cox regression",
+            "Chi-square and Fisher's exact test, relative risk and odds ratio",
+            "Statistics computed by R",
+            "Publication-ready graphs: box and violin plots, bars, scatter plots, volcano plots, heatmaps",
+            "Export as PNG at up to 600 dpi, SVG or JPG",
+            "Works offline, no account, data stays on your Mac"
+          ],
           "operatingSystem": "macOS 13.3 or later",
           "isAccessibleForFree": true,
           "license": "https://www.gnu.org/licenses/gpl-3.0.html",
           "downloadUrl": "https://github.com/mickaphd/Helix/releases/latest",
-          "sameAs": ["https://github.com/mickaphd/Helix"],
+          "sameAs": ["https://github.com/mickaphd/Helix", "https://doi.org/10.5281/zenodo.24156418", "https://alternativeto.net/software/helix-data-analysis-/about/"],
+          "identifier": "https://doi.org/10.5281/zenodo.24156418",
           "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
           "author": { "@type": "Person", "name": "mickaphd", "url": "https://github.com/mickaphd" }
         }
@@ -103,7 +118,7 @@
 
                 <div class="hero-shot">
                     <button class="shot" type="button" aria-label="Enlarge screenshot: overview of Helix">
-                        <img src="resources/screenshots/01-overview.webp" srcset="resources/screenshots/01-overview-1000.webp 1000w, resources/screenshots/01-overview.webp 2000w" sizes="(max-width: 1160px) 100vw, 1112px" alt="Helix window with the project sidebar, a scatter dot plot with significance stars, and the inspector" width="2000" height="1293" fetchpriority="high">
+                        <img src="resources/screenshots/01-overview.webp" srcset="resources/screenshots/01-overview-1000.webp 1000w, resources/screenshots/01-overview.webp 2000w" sizes="(max-width: 1160px) 100vw, 1112px" alt="Helix window with the project sidebar, a scatter dot plot with significance stars from a one-way ANOVA, and the inspector" width="2000" height="1302" fetchpriority="high">
                     </button>
                 </div>
             </section>
@@ -139,15 +154,17 @@
                 <div class="feature">
                     <div class="feature-text">
                         <h3>Tables</h3>
-                        <p class="lead">Five table types, each offering the analyses and graphs that fit its data.</p>
+                        <p class="lead">Six table types, each offering the analyses and graphs that fit its data.</p>
                         <ul class="ticks">
-                            <li><strong>Column, XY, Grouped, Multiple Variables</strong> and <strong>Contingency</strong> tables</li>
+                            <li><strong>Column, XY, Grouped, Multiple Variables, Contingency</strong> and <strong>Survival</strong> tables</li>
                             <li>A spreadsheet that feels like one: <strong>copy and paste with Excel or Numbers</strong>, fill down, find, undo and redo everything</li>
                             <li><strong>Exclude a value</strong> from the analyses without deleting it</li>
+                            <li><strong>Transform or normalize</strong> (logarithms, percent of control, z-scores) into a table that follows its own</li>
+                            <li><strong>Notes and color tags</strong>, as in the Finder, to find your way in a large project</li>
                         </ul>
                     </div>
                     <button class="shot" type="button" aria-label="Enlarge screenshot: a Column table">
-                        <img src="resources/screenshots/02-table.webp" srcset="resources/screenshots/02-table-1000.webp 1000w, resources/screenshots/02-table.webp 2000w" sizes="(max-width: 900px) 100vw, 640px" alt="A data table in Helix, with the project sidebar listing its analyses and graphs" width="2000" height="1293" loading="lazy">
+                        <img src="resources/screenshots/02-table.webp" srcset="resources/screenshots/02-table-1000.webp 1000w, resources/screenshots/02-table.webp 2000w" sizes="(max-width: 900px) 100vw, 640px" alt="A data table in Helix with an excluded value and a note, and the project sidebar listing its analyses and graphs" width="2000" height="1302" loading="lazy">
                     </button>
                 </div>
 
@@ -156,16 +173,17 @@
                         <h3>Analyses, guided</h3>
                         <p class="lead">Assistants ask the right questions, pick the right test and can check normality for you. Every result comes from R.</p>
                         <ul class="ticks">
-                            <li><strong>Descriptive statistics</strong> and <strong>outlier detection</strong> (ROUT)</li>
-                            <li><strong>Two groups:</strong> unpaired, Welch, paired and ratio t tests, Mann-Whitney, Wilcoxon</li>
-                            <li><strong>More groups:</strong> one-way and repeated-measures ANOVA, Kruskal-Wallis, Friedman, with multiple comparisons (Tukey, Bonferroni, Dunn)</li>
-                            <li><strong>Grouped data:</strong> two-way ANOVA (ordinary, repeated measures, Scheirer-Ray-Hare) and multiple t tests with Holm or FDR correction</li>
-                            <li><strong>XY and variables:</strong> correlation (Pearson, Spearman), linear and nonlinear regression (dose-response, 4PL), multiple regression, area under the curve</li>
-                            <li><strong>Contingency:</strong> chi-square and Fisher’s exact test</li>
+                            <li><strong>Descriptive statistics</strong>, <strong>normality</strong> (Shapiro-Wilk) and <strong>outliers</strong> (ROUT, Grubbs)</li>
+                            <li><strong>Two groups:</strong> t tests (unpaired, Welch, paired, ratio, lognormal), Mann-Whitney, Wilcoxon, with effect sizes</li>
+                            <li><strong>More groups:</strong> one-way, Welch’s and repeated-measures ANOVA, mixed-effects model, Kruskal-Wallis, Friedman, with multiple comparisons (Tukey, Dunnett, Šidák, Games-Howell, Dunn…)</li>
+                            <li><strong>Grouped data:</strong> two-way ANOVA (ordinary, repeated measures, Scheirer-Ray-Hare) and multiple t tests</li>
+                            <li><strong>XY and variables:</strong> correlation, linear, nonlinear (dose-response, growth, decay…), logistic and multiple regression, standard curves, area under the curve</li>
+                            <li><strong>Survival:</strong> Kaplan-Meier, log-rank test, hazard ratios and Cox regression</li>
+                            <li><strong>Contingency:</strong> chi-square and Fisher’s exact test, relative risk, odds ratio, sensitivity and specificity</li>
                         </ul>
                     </div>
-                    <button class="shot" type="button" aria-label="Enlarge screenshot: the analysis assistant">
-                        <img src="resources/screenshots/03-wizard.webp" srcset="resources/screenshots/03-wizard-1000.webp 1000w, resources/screenshots/03-wizard.webp 2000w" sizes="(max-width: 900px) 100vw, 640px" alt="The New Analysis assistant in Helix proposing the tests that fit an XY standard curve table" width="2000" height="1293" loading="lazy">
+                    <button class="shot" type="button" aria-label="Enlarge screenshot: the New Table window">
+                        <img src="resources/screenshots/03-wizard.webp" srcset="resources/screenshots/03-wizard-1000.webp 1000w, resources/screenshots/03-wizard.webp 2000w" sizes="(max-width: 900px) 100vw, 640px" alt="The New Table window in Helix, listing the six table types and the analyses and graphs each one offers" width="2000" height="1302" loading="lazy">
                     </button>
                 </div>
 
@@ -175,12 +193,12 @@
                         <p class="lead">Every analysis gets its own report, computed by R, the reference for statistics.</p>
                         <ul class="ticks">
                             <li><strong>Always in sync:</strong> results update as soon as the data change</li>
-                            <li>The assistants <strong>can check normality for you</strong> before choosing a test</li>
-                            <li>Results feed the graphs: <strong>significance stars and regression lines</strong> come straight from your analyses</li>
+                            <li>Every result opens with <strong>the data it analyzed</strong>, <strong>what it means in plain words</strong> and its <strong>assumptions checked</strong></li>
+                            <li>Results feed the graphs: <strong>significance stars, group letters and fitted curves</strong> come straight from your analyses</li>
                         </ul>
                     </div>
                     <button class="shot" type="button" aria-label="Enlarge screenshot: an analysis report">
-                        <img src="resources/screenshots/04-results.webp" srcset="resources/screenshots/04-results-1000.webp 1000w, resources/screenshots/04-results.webp 2000w" sizes="(max-width: 900px) 100vw, 640px" alt="Welch’s t test report in Helix: t, degrees of freedom, P value, 95% confidence interval and descriptive statistics" width="2000" height="1293" loading="lazy">
+                        <img src="resources/screenshots/04-results.webp" srcset="resources/screenshots/04-results-1000.webp 1000w, resources/screenshots/04-results.webp 2000w" sizes="(max-width: 900px) 100vw, 640px" alt="Multiple regression report in Helix: what the result means in plain words, R squared, P value and coefficients" width="2000" height="1302" loading="lazy">
                     </button>
                 </div>
 
@@ -189,16 +207,17 @@
                         <h3>Graphs ready for a paper</h3>
                         <p class="lead">The right graphs for each table, and figures you can send to a journal as they are.</p>
                         <ul class="ticks">
-                            <li><strong>Individual values, box and violin plots, bars, lines, scatter plots</strong>, dose-response curves, Kaplan-Meier survival curves, heatmaps, pie charts</li>
+                            <li><strong>Individual values, box and violin plots, bars, lines, scatter plots</strong>, histograms, dose-response curves, Kaplan-Meier survival curves, heatmaps, pie charts</li>
                             <li><strong>Volcano plots</strong> that handle tens of thousands of genes</li>
+                            <li><strong>Log axes</strong>, 95% CI error bars, <strong>reference lines</strong>, and the number at risk under survival curves</li>
                             <li>Resize by dragging an axis or <strong>set exact sizes</strong>, white or transparent background</li>
                             <li><strong>Your own palettes</strong>, kept on your Mac and ready in every project</li>
                             <li><strong>Match</strong> a graph to another one: colors, points, error bars, text, size…</li>
                             <li>Export as <strong>PNG at 150, 300 or 600 dpi, SVG or JPG</strong>, or copy and paste anywhere</li>
                         </ul>
                     </div>
-                    <button class="shot" type="button" aria-label="Enlarge screenshot: box and violin plots">
-                        <img src="resources/screenshots/05-box-violin.webp" srcset="resources/screenshots/05-box-violin-1000.webp 1000w, resources/screenshots/05-box-violin.webp 2000w" sizes="(max-width: 900px) 100vw, 640px" alt="Box and violin plot with its P value in Helix" width="2000" height="1293" loading="lazy">
+                    <button class="shot" type="button" aria-label="Enlarge screenshot: grouped bars with P values">
+                        <img src="resources/screenshots/05-bars.webp" srcset="resources/screenshots/05-bars-1000.webp 1000w, resources/screenshots/05-bars.webp 2000w" sizes="(max-width: 900px) 100vw, 640px" alt="Interleaved bars with P values from a two-way repeated-measures ANOVA in Helix" width="2000" height="1302" loading="lazy">
                     </button>
                 </div>
             </section>
@@ -211,27 +230,33 @@
                 <div class="gallery">
                     <figure>
                         <button class="shot" type="button" aria-label="Enlarge screenshot: dose-response curve">
-                            <img src="resources/screenshots/06-dose-response.webp" srcset="resources/screenshots/06-dose-response-1000.webp 1000w, resources/screenshots/06-dose-response.webp 2000w" sizes="(max-width: 640px) 100vw, 556px" alt="Dose-response curve fitted by nonlinear regression (4PL) in Helix" width="2000" height="1293" loading="lazy">
+                            <img src="resources/screenshots/06-dose-response.webp" srcset="resources/screenshots/06-dose-response-1000.webp 1000w, resources/screenshots/06-dose-response.webp 2000w" sizes="(max-width: 640px) 100vw, 556px" alt="Two dose-response curves fitted by nonlinear regression (4PL) with their EC50, in dark mode, with export options at 150, 300 or 600 dpi in Helix" width="2000" height="1302" loading="lazy">
                         </button>
                         <figcaption>Dose-response curve (nonlinear regression, 4PL)</figcaption>
                     </figure>
                     <figure>
                         <button class="shot" type="button" aria-label="Enlarge screenshot: volcano plot">
-                            <img src="resources/screenshots/07-volcano.webp" srcset="resources/screenshots/07-volcano-1000.webp 1000w, resources/screenshots/07-volcano.webp 2000w" sizes="(max-width: 640px) 100vw, 556px" alt="Volcano plot with gene names labeled in Helix" width="2000" height="1293" loading="lazy">
+                            <img src="resources/screenshots/07-volcano.webp" srcset="resources/screenshots/07-volcano-1000.webp 1000w, resources/screenshots/07-volcano.webp 2000w" sizes="(max-width: 640px) 100vw, 556px" alt="Volcano plot with gene names labeled in Helix" width="2000" height="1302" loading="lazy">
                         </button>
                         <figcaption>Volcano plot with gene names</figcaption>
                     </figure>
                     <figure>
+                        <button class="shot" type="button" aria-label="Enlarge screenshot: Kaplan-Meier survival curves">
+                            <img src="resources/screenshots/10-survival.webp" srcset="resources/screenshots/10-survival-1000.webp 1000w, resources/screenshots/10-survival.webp 2000w" sizes="(max-width: 640px) 100vw, 556px" alt="Kaplan-Meier survival curves of three groups with their 95% confidence bands in Helix" width="2000" height="1302" loading="lazy">
+                        </button>
+                        <figcaption>Kaplan-Meier survival curves</figcaption>
+                    </figure>
+                    <figure>
                         <button class="shot" type="button" aria-label="Enlarge screenshot: heatmap">
-                            <img src="resources/screenshots/08-heatmap.webp" srcset="resources/screenshots/08-heatmap-1000.webp 1000w, resources/screenshots/08-heatmap.webp 2000w" sizes="(max-width: 640px) 100vw, 556px" alt="Heatmap of the top 20 genes with the Coolwarm color scale and export options in Helix" width="2000" height="1293" loading="lazy">
+                            <img src="resources/screenshots/08-heatmap.webp" srcset="resources/screenshots/08-heatmap-1000.webp 1000w, resources/screenshots/08-heatmap.webp 2000w" sizes="(max-width: 640px) 100vw, 556px" alt="Heatmap of the top 20 genes with a red-blue color scale and export options in Helix" width="2000" height="1302" loading="lazy">
                         </button>
                         <figcaption>Heatmap with selectable color scales</figcaption>
                     </figure>
                     <figure>
-                        <button class="shot" type="button" aria-label="Enlarge screenshot: dark mode">
-                            <img src="resources/screenshots/09-dark.webp" srcset="resources/screenshots/09-dark-1000.webp 1000w, resources/screenshots/09-dark.webp 2000w" sizes="(max-width: 640px) 100vw, 556px" alt="Helix in dark mode" width="2000" height="1293" loading="lazy">
+                        <button class="shot" type="button" aria-label="Enlarge screenshot: logistic regression in dark mode">
+                            <img src="resources/screenshots/09-dark.webp" srcset="resources/screenshots/09-dark-1000.webp 1000w, resources/screenshots/09-dark.webp 2000w" sizes="(max-width: 640px) 100vw, 556px" alt="Simple logistic regression report in Helix, in dark mode, with notes beside it" width="2000" height="1302" loading="lazy">
                         </button>
-                        <figcaption>Light and dark mode</figcaption>
+                        <figcaption>Logistic regression, in dark mode</figcaption>
                     </figure>
                 </div>
             </section>
@@ -245,7 +270,7 @@
                     <div class="card">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
                         <h3>Private</h3>
-                        <p>Helix works entirely on your Mac: your data never leave it, and there is no telemetry. Its only connection is a daily check on GitHub for a newer version.</p>
+                        <p>Helix works entirely on your Mac: your data never leave it, and there is no telemetry. Its only connections are a daily check on GitHub for a newer version, and the updates you choose to install.</p>
                     </div>
                     <div class="card">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 7l-5 5 5 5M16 7l5 5-5 5"/></svg>
@@ -270,13 +295,16 @@
                     <div class="card">
                         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 1 1-3-6.7L21 8"/><path d="M21 3v5h-5"/></svg>
                         <h3>Stays up to date</h3>
-                        <p>Helix tells you when a new version is out (Helix › Check for Updates…). See what changed in the <a href="https://github.com/mickaphd/Helix/releases">release notes</a>.</p>
+                        <p>Helix asks before each update, installs it and relaunches with your projects. See what changed in the <a href="https://github.com/mickaphd/Helix/releases">release notes</a>.</p>
                     </div>
                 </div>
                 <p class="made-with">
                     Helix is designed and maintained by a scientist. Every analysis and graph is checked against R
                     by an automated test suite, the code is reviewed and audited with the help of Claude Code,
                     and the whole history is <a href="https://github.com/mickaphd/Helix/commits/main">public on GitHub</a>.
+                </p>
+                <p class="cite-row">
+                    <a class="cite" href="/faq/#cite"><span class="cite-label">Cite Helix</span><span class="cite-doi">DOI 10.5281/zenodo.24156418</span><span class="cite-arrow" aria-hidden="true">→</span></a>
                 </p>
             </section>
 
@@ -334,8 +362,10 @@
     </footer>
 
     <dialog class="lightbox" aria-label="Enlarged screenshot">
-        <button type="button" aria-label="Close">&times;</button>
+        <button class="lb-close" type="button" aria-label="Close">&times;</button>
+        <button class="lb-nav lb-prev" type="button" aria-label="Previous screenshot">&#8249;</button>
         <img alt="">
+        <button class="lb-nav lb-next" type="button" aria-label="Next screenshot">&#8250;</button>
     </dialog>
 </body>
 </html>
