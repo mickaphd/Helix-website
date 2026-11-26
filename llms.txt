@@ -16,7 +16,7 @@ Each table holds its own analyses and graphs, which update as soon as the data c
 
 - [Website](https://www.helix-desktop.com/): overview, features and screenshots
 - [FAQ](https://www.helix-desktop.com/faq/): requirements, privacy, statistical tests, exporting graphs, updates and support
-- [Helix in numbers](https://www.helix-desktop.com/numbers/): installs and daily users, estimated from GitHub’s public download counters (no tracker in the app)
+- [Helix in numbers](https://www.helix-desktop.com/numbers/): installs and in-app updates per month, from GitHub’s public download counters (no tracker in the app)
 - [Download](https://github.com/mickaphd/Helix/releases/latest): latest release, one DMG for Apple Silicon and one for Intel
 - [Source code](https://github.com/mickaphd/Helix): GitHub repository and README
 - [File format](https://github.com/mickaphd/Helix/blob/main/FILE-FORMAT.md): description of .hlx projects

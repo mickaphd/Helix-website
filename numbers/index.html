@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Helix in numbers: installs and daily users</title>
-    <meta name="description" content="How many people install and use Helix, the free Mac alternative to GraphPad Prism, estimated from GitHub’s public download counters. No tracker or telemetry in the app.">
+    <title>Helix in numbers: installs and updates</title>
+    <meta name="description" content="How many people install and update Helix, the free Mac alternative to GraphPad Prism, from GitHub’s public download counters. No tracker or telemetry in the app.">
     <meta name="robots" content="max-image-preview:large">
     <meta name="theme-color" content="#030303">
     <link rel="canonical" href="https://www.helix-desktop.com/numbers/">
@@ -14,7 +14,7 @@
     <meta property="og:site_name" content="Helix">
     <meta property="og:url" content="https://www.helix-desktop.com/numbers/">
     <meta property="og:title" content="Helix in numbers">
-    <meta property="og:description" content="Installs and daily users of Helix, estimated from GitHub’s public download counters, with no tracker in the app.">
+    <meta property="og:description" content="Installs and updates of Helix, from GitHub’s public download counters, with no tracker in the app.">
     <meta property="og:image" content="https://www.helix-desktop.com/resources/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -60,18 +60,18 @@
                     <div class="chart" id="installs-chart"></div>
                 </div>
                 <div class="stat">
-                    <div class="label">Estimated daily users</div>
-                    <div class="value" id="active">–</div>
-                    <div class="note" id="active-note">&nbsp;</div>
-                    <div class="chart" id="active-chart"></div>
+                    <div class="label">Estimated updates</div>
+                    <div class="value" id="updates">–</div>
+                    <div class="note" id="updates-note">&nbsp;</div>
+                    <div class="chart" id="updates-chart"></div>
                 </div>
             </div>
 
             <p class="numbers-error" id="error" hidden></p>
 
             <ul class="numbers-how">
-                <li><b>Estimated installs</b>: downloads of the app from GitHub.</li>
-                <li><b>Estimated daily users</b>: since version 1.0.8, Helix checks once a day for updates by downloading a tiny file from GitHub, which counts each download. Dividing those checks by the number of days gives the Macs that open Helix on an average day. Someone who uses Helix once a week only counts that day, so more people use Helix than this number.</li>
+                <li><b>Estimated installs</b>: downloads of the app’s installer (the <code>.dmg</code> files) from GitHub.</li>
+                <li><b>Estimated updates</b>: new versions installed from inside Helix by people who already have it (the <code>.app.tar.gz</code> files).</li>
             </ul>
         </div>
     </main>

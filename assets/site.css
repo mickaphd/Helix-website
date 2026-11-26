@@ -281,6 +281,7 @@ footer { border-top: 1px solid var(--border); margin-top: 72px; padding: 40px 0 
 .numbers-error { color: #ff8a80; margin-top: 16px; }
 .numbers-how { color: var(--text-muted); font-size: 0.85rem; margin: 28px 0 72px; padding-left: 18px; }
 .numbers-how li { margin-top: 6px; }
+.numbers-how code { font-family: var(--mono); font-size: 0.9em; }
 
 @media (max-width: 900px) {
     .feature, .feature.reverse { grid-template-columns: 1fr; gap: 28px; padding: 28px 0; }
