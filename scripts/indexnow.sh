@@ -5,4 +5,4 @@ set -e
 KEY=bfdb7bf83d242b76cac5bddc3f71d8a1
 curl -s -o /dev/null -w "IndexNow: HTTP %{http_code}\n" -X POST https://api.indexnow.org/indexnow \
     -H "Content-Type: application/json; charset=utf-8" \
-    -d "{\"host\":\"www.helix-desktop.com\",\"key\":\"$KEY\",\"keyLocation\":\"https://www.helix-desktop.com/$KEY.txt\",\"urlList\":[\"https://www.helix-desktop.com/\",\"https://www.helix-desktop.com/faq/\",\"https://www.helix-desktop.com/llms.txt\"]}"
+    -d "{\"host\":\"www.helix-desktop.com\",\"key\":\"$KEY\",\"keyLocation\":\"https://www.helix-desktop.com/$KEY.txt\",\"urlList\":[\"https://www.helix-desktop.com/\",\"https://www.helix-desktop.com/faq/\",\"https://www.helix-desktop.com/numbers/\",\"https://www.helix-desktop.com/llms.txt\"]}"

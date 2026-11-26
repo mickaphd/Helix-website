@@ -257,6 +257,31 @@ footer { border-top: 1px solid var(--border); margin-top: 72px; padding: 40px 0 
     .lightbox .lb-count { bottom: 32px; }
 }
 
+/* Helix in numbers */
+
+.stats { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.stat { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 22px 24px 18px; }
+.stat .label { color: var(--text-muted); font-size: 0.9rem; }
+.stat .value { font-size: 2.6rem; font-weight: 600; letter-spacing: -0.02em; line-height: 1.15; margin-top: 4px; font-variant-numeric: tabular-nums; }
+.stat .value small { font-size: 1rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0; }
+.stat .note { color: var(--text-faint); font-size: 0.82rem; margin-bottom: 22px; }
+.chart { position: relative; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; }
+.chart .axis { fill: var(--text-faint); font-size: 12px; }
+.chart .gridline { stroke: rgba(255, 255, 255, 0.06); stroke-width: 1; }
+.chart .bar { fill: var(--cream); transition: fill 0.12s; }
+.chart .bar.on { fill: #fff; }
+.chart .hit { fill: transparent; }
+.chart .tip {
+    position: absolute; display: none; pointer-events: none; white-space: nowrap;
+    transform: translate(-50%, -100%); margin-top: -8px; padding: 6px 10px;
+    background: #1b1b1b; border: 1px solid var(--border-strong); border-radius: 8px; font-size: 0.82rem;
+}
+.chart .tip b { font-variant-numeric: tabular-nums; }
+.numbers-error { color: #ff8a80; margin-top: 16px; }
+.numbers-how { color: var(--text-muted); font-size: 0.85rem; margin: 28px 0 72px; padding-left: 18px; }
+.numbers-how li { margin-top: 6px; }
+
 @media (max-width: 900px) {
     .feature, .feature.reverse { grid-template-columns: 1fr; gap: 28px; padding: 28px 0; }
     .feature.reverse .feature-text { order: 0; }
@@ -272,7 +297,7 @@ footer { border-top: 1px solid var(--border); margin-top: 72px; padding: 40px 0 
     .hero-shot { margin-top: 40px; }
     .hero .btn, .download-band .btn { width: 100%; }
     section { padding: 48px 0; }
-    .gallery, .chips { grid-template-columns: 1fr; }
+    .gallery, .chips, .stats { grid-template-columns: 1fr; }
     .gallery figure:last-child:nth-child(odd) { width: auto; justify-self: stretch; }
     .download-band { padding: 40px 20px; }
 }

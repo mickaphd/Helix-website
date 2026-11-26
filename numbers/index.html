@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Helix in numbers: installs and daily users</title>
+    <meta name="description" content="How many people install and use Helix, the free Mac alternative to GraphPad Prism, estimated from GitHub’s public download counters. No tracker or telemetry in the app.">
+    <meta name="robots" content="max-image-preview:large">
+    <meta name="theme-color" content="#030303">
+    <link rel="canonical" href="https://www.helix-desktop.com/numbers/">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Helix">
+    <meta property="og:url" content="https://www.helix-desktop.com/numbers/">
+    <meta property="og:title" content="Helix in numbers">
+    <meta property="og:description" content="Installs and daily users of Helix, estimated from GitHub’s public download counters, with no tracker in the app.">
+    <meta property="og:image" content="https://www.helix-desktop.com/resources/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="The Helix app showing a table, its analyses and a graph">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="../resources/favicon.png">
+    <link rel="apple-touch-icon" href="../resources/apple-touch-icon.png">
+    <link rel="stylesheet" href="../assets/site.css">
+    <script src="../assets/site.js" defer></script>
+    <script src="../assets/numbers.js" defer></script>
+    <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="topbar">
+        <div class="container">
+            <a class="brand" href="/"><img src="../resources/app-icon-64.webp" alt="" width="28" height="28">Helix</a>
+            <nav class="nav" aria-label="Main">
+                <a class="hide-sm" href="/#features">Features</a>
+                <a class="hide-sm" href="/#privacy">Privacy</a>
+                <a href="/faq/">FAQ</a>
+                <a href="https://github.com/mickaphd/Helix">GitHub</a>
+                <a class="btn btn-small" href="https://github.com/mickaphd/Helix/releases/latest">Download</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main">
+        <div class="container narrow">
+            <div class="page-head">
+                <h1>Helix in numbers</h1>
+                <p>These numbers are estimated from GitHub’s public download counters, as there is no tracker or telemetry in the app. Updated <span id="updated">…</span>.</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <div class="label">Estimated installs</div>
+                    <div class="value" id="installs">–</div>
+                    <div class="note" id="installs-note">&nbsp;</div>
+                    <div class="chart" id="installs-chart"></div>
+                </div>
+                <div class="stat">
+                    <div class="label">Estimated daily users</div>
+                    <div class="value" id="active">–</div>
+                    <div class="note" id="active-note">&nbsp;</div>
+                    <div class="chart" id="active-chart"></div>
+                </div>
+            </div>
+
+            <p class="numbers-error" id="error" hidden></p>
+
+            <ul class="numbers-how">
+                <li><b>Estimated installs</b>: downloads of the app from GitHub.</li>
+                <li><b>Estimated daily users</b>: since version 1.0.8, Helix checks once a day for updates by downloading a tiny file from GitHub, which counts each download. Dividing those checks by the number of days gives the Macs that open Helix on an average day. Someone who uses Helix once a week only counts that day, so more people use Helix than this number.</li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <span class="signature">
+                    <span class="main">Thought and designed by a scientist, for scientists</span>
+                    <span class="alt" aria-hidden="true">Made with ❤️ by micka from Paris</span>
+                </span>
+                <nav class="footer-links" aria-label="Footer">
+                    <a href="/faq/">FAQ</a>
+                    <a href="/numbers/" aria-current="page">Helix in numbers</a>
+                    <a href="https://github.com/mickaphd/Helix">Source code</a>
+                    <a href="https://github.com/mickaphd/Helix/releases">Release notes</a>
+                    <a href="https://github.com/mickaphd/Helix/discussions">Discussions</a>
+                    <a href="https://github.com/mickaphd/Helix/issues">Report a problem</a>
+                    <a href="https://www.buymeacoffee.com/mickaphd">Buy me a coffee</a>
+                </nav>
+            </div>
+            <p class="legal">
+                © 2026 mickaphd · Helix is free software, licensed under the <a href="https://github.com/mickaphd/Helix/blob/main/LICENSE">GPL-3.0</a>.<br>
+                GraphPad Prism is a trademark of GraphPad Software, LLC. Helix is an independent project, not affiliated with or endorsed by GraphPad Software.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

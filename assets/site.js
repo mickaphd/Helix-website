@@ -23,17 +23,31 @@ if (lightbox) {
         if (event.key === 'ArrowLeft') show(current - 1);
         if (event.key === 'ArrowRight') show(current + 1);
     });
-    let touchX = null;
+    // Swipe with one finger to change screenshot, but never while pinching or zoomed in:
+    // then the fingers are moving around the image, not asking for the next one.
+    const zoomed = () => (window.visualViewport?.scale ?? 1) > 1.05;
+    let start = null;
+    let pinched = false;
     let swiped = false;
-    lightbox.addEventListener('touchstart', (event) => { touchX = event.touches[0].clientX; }, { passive: true });
+    lightbox.addEventListener('touchstart', (event) => {
+        if (event.touches.length > 1) pinched = true;
+        start = event.touches.length === 1 && !pinched ? { x: event.touches[0].clientX, y: event.touches[0].clientY } : null;
+    }, { passive: true });
+    lightbox.addEventListener('touchmove', (event) => {
+        if (event.touches.length > 1) { pinched = true; start = null; }
+    }, { passive: true });
     lightbox.addEventListener('touchend', (event) => {
-        if (touchX === null) return;
-        const dx = event.changedTouches[0].clientX - touchX;
-        touchX = null;
-        if (Math.abs(dx) > 50) { show(current + (dx < 0 ? 1 : -1)); swiped = true; }
+        if (event.touches.length > 0) return;
+        const wasPinch = pinched;
+        pinched = false;
+        if (!start || wasPinch || zoomed()) { start = null; swiped = wasPinch; return; }
+        const dx = event.changedTouches[0].clientX - start.x, dy = event.changedTouches[0].clientY - start.y;
+        start = null;
+        if (Math.abs(dx) > 60 && Math.abs(dx) > 2 * Math.abs(dy)) { show(current + (dx < 0 ? 1 : -1)); swiped = true; }
     });
-    lightbox.addEventListener('click', () => {
+    lightbox.addEventListener('click', (event) => {
         if (swiped) { swiped = false; return; }
+        if (zoomed() && event.target === image) return;
         lightbox.close();
     });
 }
